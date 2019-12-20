@@ -1,8 +1,9 @@
 import React from "react";
 import Header from "./components/Header.js";
 import CharacterList from "./components/CharacterList.js";
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import { BrowserRouter as  Route,  Switch } from "react-router-dom";
 import WelcomePage from "./components/WelcomePage.js";
+
 
 
 export default function App() {
