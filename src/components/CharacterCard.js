@@ -17,15 +17,17 @@ const CharacterCard = props => {
         <CardImg
           top
           width="100%"
-          src=""
+          src={props.image}
           alt="Card image cap"
         />
         <CardBody>
           <CardTitle>Name: {props.name}</CardTitle>
           <CardSubtitle>Status: {props.status}</CardSubtitle>
           <CardText>
-            <p>Gender:{props.gender}</p>
-            <p>Species:{props.species}</p>
+            Gender:{props.gender}
+          </CardText>
+          <CardText>
+            Species:{props.species}
           </CardText>
         </CardBody>
       </Card>

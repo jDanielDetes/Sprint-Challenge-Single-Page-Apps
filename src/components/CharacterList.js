@@ -28,6 +28,7 @@ export default function CharacterList() {
           status={characters.status}
           gender={characters.gender}
           species={characters.species}
+          image={characters.image}
           />
         )
       })}
