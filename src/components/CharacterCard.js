@@ -32,3 +32,4 @@ const CharacterCard = props => {
     </span>
   );
 };
+export default CharacterCard

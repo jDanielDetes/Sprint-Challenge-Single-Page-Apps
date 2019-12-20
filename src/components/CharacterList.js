@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios'
-
+import CharacterCard from "./CharacterCard"
 
 
 export default function CharacterList() {
@@ -10,6 +10,8 @@ export default function CharacterList() {
     axios.get("https://rickandmortyapi.com/api/character/")
     .then(response=>{
       console.log(response)
+      const charData= response.data.results
+      setCharacter(charData)
     })
     .catch(error =>{
       console.log("the data was not returned", error)
@@ -19,7 +21,16 @@ export default function CharacterList() {
 
   return (
     <section className="character-list">
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {character.map((characters)=>{
+        return(
+          <CharacterCard
+          name={characters.name}
+          status={characters.status}
+          gender={characters.gender}
+          species={characters.species}
+          />
+        )
+      })}
     </section>
   );
 }
