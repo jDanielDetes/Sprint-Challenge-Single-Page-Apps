@@ -13,7 +13,13 @@ const CharacterCard = props => {
   // name , status, species
   return (
     <span>
-      <Card>
+      
+      <Card  body
+        inverse
+        style={{ backgroundColor: "#333", borderColor: "#333" }}
+        body
+        outline
+        color="danger">
         <CardImg
           top
           width="100%"

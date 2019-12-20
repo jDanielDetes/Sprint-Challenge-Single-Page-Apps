@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from 'axios'
 import CharacterCard from "./CharacterCard"
 import SearchForm from "./SearchForm"
-
+import { Container, Row, Col } from 'reactstrap';
 
 export default function CharacterList() {
   const[character,setCharacter] = useState([])
@@ -37,6 +37,9 @@ export default function CharacterList() {
      characterArray={setCharacterArray}/>
       {character.map((characters)=>{
         return(
+          <Container fluid >
+            <Row sm>
+              <Col sm="3">
           <CharacterCard
           name={characters.name}
           status={characters.status}
@@ -44,8 +47,14 @@ export default function CharacterList() {
           species={characters.species}
           image={characters.image}
           />
+          </Col>
+          </Row>
+          </Container>
+          
         )
       })}
+      
     </section>
+    
   );
 }
